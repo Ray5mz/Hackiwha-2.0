@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Syne';
+  src: url('/assets/Syne.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('/assets/Tajawal.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+Header{
+  background-color: #0E1113;
+}
+
+#cat{
+  font-family: 'Syne', 'Tajwal';
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+.gray_button {
+  align-items: center;
+  background-image: linear-gradient(170deg, #FFFFFF 0%, #837E7E 86%);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 25, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.gray_button:active,
+.gray_button:hover {
+  outline: 0;
+}
+
+.gray_button span {
+  position: relative;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  z-index: 2; /* Ensure text stays above the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gray_button span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background-image: linear-gradient(15deg, #3B3838 5%, #747272 100%);
+  opacity: 1;
+  transition: opacity 300ms;
+  z-index: -1; /* Place behind the text */
+}
+
+.gray_button:hover span::before {
+  opacity: 0;
+}
+
+/* Keep existing hover/active states */
+.gray_button:active {
+  transform: scale(0.9);
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.PurpleContainer {
+  width: 1100px; /* Added px unit */
+  height: 673px; /* Added px unit */
+  margin-left: 90px; /* Added px unit */
+  background: linear-gradient(45deg, #E5C661, #2B224F);
+  display: block;
+  position: relative;
+  border-radius: 20px; /* Added for rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Added depth effect */
+  overflow: hidden; /* Ensures content stays within bounds */
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+:root {
+  --primary-color: #A98136;
+  --secondary-color: #69626d;
+  --text-color: #FEFEFE;
+  --background-gradient: linear-gradient(to bottom, #A98136, #C29B4C);
+  --button-gradient: linear-gradient(144deg, #69626d, #5a5962 50%, #d4dcdd);
+  --button-hover: linear-gradient(144deg, #1e1e1e, #1e1e1e 50%, #1e1e1e);
+  --border-radius-lg: 17px;
+  --border-radius-sm: 100px;
+  --input-padding: 16px 20px;
+  --font-family: "Syne", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login {
+  width: 320px;
+  background: var(--background-gradient);
+  padding: 30px;
+  color: #e2dddd;
+  border-radius: var(--border-radius-lg);
+  font-family: var(--font-family);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login h1 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Input styles */
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  padding: var(--input-padding);
+  margin: 0;
+  font-size: 1rem;
+  border-radius: var(--border-radius-sm);
+  background: rgba(169, 129, 54, 0.7);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login input:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Button styles */
+.login-button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  background: var(--button-gradient);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 360px) {
+  .login {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
