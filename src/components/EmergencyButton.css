@@ -1,0 +1,51 @@
+#Emergency {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    background-image: linear-gradient(40deg, #D76A2D 30%, #9B4D21 67%, #2F180B);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    overflow: visible;
+  }
+  
+  #Emergency:focus {
+    outline: none;
+  }
+  
+  #Emergency:active {
+    transform: scale(0.95);
+  }
+  
+  #Emergency::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,165,0,0.8) 30%, rgba(255,140,0,0.4) 40%, rgba(255,140,0,0) 70%);
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  
+  #Emergency.clicked::after {
+    animation: wave 1s ease-out;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0.8;
+    }
+    80% {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0.3;
+    }
+  }
